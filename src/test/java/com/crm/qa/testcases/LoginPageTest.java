@@ -9,9 +9,9 @@ import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
 
-public class LoginPageTest extends TestBase {    
-	LoginPage loginPage;
-	HomePage homePage;
+	public class LoginPageTest extends TestBase {    
+	LoginPage loginPage; //He created an object first @ line 23 then took the variable & brought to class level, this 
+	HomePage homePage;  //provides the flexibility to use it through out the program 
 	
 	public LoginPageTest() {
 		super();  //Calls super class constructor (TestBase)
@@ -28,8 +28,8 @@ public class LoginPageTest extends TestBase {
 	@Test(priority=1)
 	public void loginPageTitleTest(){
 		String title = loginPage.validateLoginPageTitle();
-		Assert.assertEquals(title, "CRM software for customer relationship management, sales, and support"); //Assert helps to validate what is the actual page title 
-	}
+		Assert.assertEquals(title, "CRMPRO  - CRM software for customer relationship management, sales, and support."); //Assert helps to validate what is the actual page title 
+	}                               //Get title by being logged out, page source 
 	
 	@Test(priority=2)
 	public void crmLogoImageTest(){
@@ -38,7 +38,7 @@ public class LoginPageTest extends TestBase {
 	}
 	
 	@Test(priority=3)
-	public void loginTest(){ //We didn't hard coded, that's why we store this info in config.properties and by LoginPageTest class "extends" TestBase, can access info
+	public void loginTest(){ //We didn't hard code it, that's why we store this info in config.properties and by LoginPageTest class "extends" TestBase, can access info
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	

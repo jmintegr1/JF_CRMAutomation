@@ -18,7 +18,7 @@ public class TestBase {  //Both reference variables defined right after class an
 	public static Properties prop; //Define this property 
 	
 	
-	public TestBase(){
+	public TestBase(){  //Gets called by all PageTest classes constructors with "super" keyword 
 		try {
 			prop = new Properties();   //This property above is getting initialized here
 			FileInputStream ip = new FileInputStream("/Users/jewellmehedi/eclipse-workspace/FreeCRMTest/src/main/java/com/crm/qa"
@@ -32,25 +32,30 @@ public class TestBase {  //Both reference variables defined right after class an
 	}
 	
 	
-	public static void initialization() throws InterruptedException{
-		String browserName = prop.getProperty("browser");   //Prop assist in reading properties
+		//public static void initialization() throws InterruptedException{
+		//String browserName = prop.getProperty("browser");   //Prop assist in reading properties
 		
-		if(browserName.equals("chrome")){
+		/*if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "/Users/jewellmehedi/Downloads/chromedriver");
 			driver = new ChromeDriver(); //Refers to WebDriver driver; variable above.. line 17
-			
-		}
-		else if(browserName.equals("FF")) {
-				System.setProperty("webdriver.gecko.driver", "/Users/jewellmehedi/Downloads/geckodriver");
-				driver = new FirefoxDriver();	
-		}
 		
-		//driver.manage().window().maximize();
-		//driver.manage().deleteAllCookies();
+		
+		/*else if(browserName.equals("FF")) {
+				System.setProperty("webdriver.gecko.driver", "/Users/jewellmehedi/Downloads/geckodriver");
+				driver = new FirefoxDriver(); 	
+		}*/
+		
+		public static void initialization() throws InterruptedException{
+		String browserName = prop.getProperty("browser");
+		System.setProperty("webdriver.chrome.driver", "/Users/jewellmehedi/Downloads/chromedriver");
+		driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		//driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		//driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("url"));  //Advantage of prop, can use prop inside the initialization method  
 		//because we defined prop at the global level	

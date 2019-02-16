@@ -54,12 +54,9 @@ public class ContactsPageTest extends TestBase {
 	}
 	
 	
-	
-	
-	
 	@AfterMethod
 	public void tearDown() {   //***TC should be separated & independent of each other. Because if don't fully shut down a browser after executing it 
 		driver.quit();        //and continue to run subsequent TCs continuously and not delete cookies or caches then it has determinately affect on the browser
 	}                        
-
+	
 }

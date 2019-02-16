@@ -15,7 +15,7 @@ public class HomePageTest extends TestBase {
 	LoginPage loginPage;
 	HomePage homePage;
 	TestUtil testUtil;  //Create TestUtil Object then import it from com.crm.qa.util
-	ContactsPage contactsPage; //Create contactsPage refrence and initialize @ line 29
+	ContactsPage contactsPage; //Create contactsPage reference and initialize @ line 29
 
 	
 	public HomePageTest() {
@@ -38,7 +38,7 @@ public class HomePageTest extends TestBase {
 		Assert.assertEquals(homePageTitle, "CRMPRO","Home page title not matched"); //With assertion we can write one more variable, pass a string message as well 
 	}                                                 //This string message will ONLY be displayed during reporting if assertion is failing
 	
-	@Test(priority=2)  //Naveen K element is available on particular frame, so right click to page source then you'll see frame name is on "mainpanel" so we 
+	@Test(priority=2)  //Jewell Mehedi element is available on particular frame, so right click to page source then you'll see frame name is on "mainpanel" so we 
 	public void verifyUserNameTest() {   //have to switch to that frame.
 		testUtil.swithToFrame(); //Will call method from TestUtil class and switch to the frame then verifying verifyCorrectUserName method from HomePage  
 		Assert.assertTrue(homePage.verifyCorrectUserName());

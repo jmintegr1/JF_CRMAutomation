@@ -8,7 +8,7 @@ import com.crm.qa.base.TestBase;
 
 public class HomePage extends TestBase {
 	
-	@FindBy(xpath="//td[contains(texgt(), 'User: Naveen K')]")   //Hard coded here but later  I can pass it from configuration file 
+	@FindBy(xpath="//td[contains(texgt(), 'User: jmintegr1')]")   //Hard coded here but later  I can pass it from configuration file 
 	WebElement userNameLabel; 
 	
 	@FindBy(xpath="//a[contains(text(),'Contacts')]")
