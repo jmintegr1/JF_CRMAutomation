@@ -21,7 +21,7 @@ public class TestBase {  //Both reference variables defined right after class an
 	public TestBase(){  //Gets called by all PageTest classes constructors with "super" keyword 
 		try {
 			prop = new Properties();   //This property above is getting initialized here
-			FileInputStream ip = new FileInputStream("/Users/jewellmehedi/eclipse-workspace/JFreeCRM_POMTest/src/main/java/com/crm/qa"
+			FileInputStream ip = new FileInputStream("/Users/jewellmehedi/eclipse-workspace/JFreeCRM_POM/src/main/java/com/crm/qa"
 					+ "/config/config.properties"); 
 			prop.load(ip);	
 		} catch (FileNotFoundException e) {

@@ -1,9 +1,10 @@
-package com.crm.qa.testcases;
+package com.crmpro.qa.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
+
 
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.ContactsPage;
@@ -37,7 +38,7 @@ public class ContactsPageTest extends TestBase {
 	
 	@Test(priority=1)
 	public void verifyContactsPageLabe() {
-		Assert.assertTrue(contactsPage.verfifyContactsLabel(), "contacts label is missing on the page");
+		Assert.assertTrue(contactsPage.verfifyContactsLabel());
 	}
 	
 	@Test(priority=2)
@@ -52,7 +53,6 @@ public class ContactsPageTest extends TestBase {
 		contactsPage.selectContactsByName("Test Run ");
         
 	}
-	
 	
 	@AfterMethod
 	public void tearDown() {   //***TC should be separated & independent of each other. Because if don't fully shut down a browser after executing it 

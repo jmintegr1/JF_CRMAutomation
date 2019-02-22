@@ -1,9 +1,9 @@
-package com.crm.qa.testcases;
+package com.crmpro.qa.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.ContactsPage;
@@ -35,7 +35,7 @@ public class HomePageTest extends TestBase {
 	@Test(priority=1)
 	public void verfifyHomePageTitleTest() {     //For Test method always write Test at the end, so prefix or suffix communicates clearly whoever is reading it
 		String homePageTitle = homePage.verifyHomePageTitle();
-		Assert.assertEquals(homePageTitle, "CRMPRO","Home page title not matched"); //With assertion we can write one more variable, pass a string message as well 
+		Assert.assertEquals(homePageTitle, "CRMPRO", "Home page title is NOT matched"); //With assertion we can write one more variable, pass a string message as well
 	}                                                 //This string message will ONLY be displayed during reporting if assertion is failing
 	
 	@Test(priority=2)  //Jewell Mehedi element is available on particular frame, so right click to page source then you'll see frame name is on "mainpanel" so we 
@@ -52,7 +52,7 @@ public class HomePageTest extends TestBase {
 	
 	@AfterMethod
 	public void tearDown() {   //***TC should be separated & independent of each other. Because if don't fully shut down a browser after executing it 
-		driver.quit();        //and continue to run subsequent TCs continuously and not delete cookies or caches then it has determinately affect on the browser
+		driver.quit();        //and continue to run subsequent TCs continuously and not delete cookies or caches then it can determinately affect the browser
 	}                        //1. Before each TC -- launch the browser & login 
 	                        //2. @Test -- execute TC	                       
 }	                       //3. After each TC -- closer the browser

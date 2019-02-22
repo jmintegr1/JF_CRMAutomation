@@ -1,4 +1,5 @@
-package com.crm.qa.testcases;
+package com.crmpro.qa.tests;
+
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -25,20 +26,21 @@ import com.crm.qa.pages.LoginPage;
 	}
 	
 	//Created object of LoginPage above so can access of all functions & methods of LoginPage class
-	@Test(priority=1)
+	@Test(priority = 1)
 	public void loginPageTitleTest(){
 		String title = loginPage.validateLoginPageTitle();
 		Assert.assertEquals(title, "CRMPRO  - CRM software for customer relationship management, sales, and support."); //Assert helps to validate what is the actual page title 
-	}                               //Get title by being logged out, page source 
+	}                               //We get title by being logged out, page source 
 	
-	@Test(priority=2)
+	@Test(priority = 2)
 	public void crmLogoImageTest(){
 		boolean flag = loginPage.validateCRMImage();
-		Assert.assertTrue(flag);   //If flag condition is true then our assertion will pass or it will fail 
+		Assert.assertTrue(flag);
+		             //If flag condition is true then our assertion will pass or it will fail 
 	}
 	
-	@Test(priority=3)
-	public void loginTest(){ //We didn't hard code it, that's why we store this info in config.properties and by LoginPageTest class "extends" TestBase, can access info
+	@Test(priority = 3)
+	public void loginTest(){ //We didn't hard code it, that's why we store this info in config properties and by LoginPageTest class "extends" TestBase, can access login info
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
