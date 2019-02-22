@@ -147,30 +147,12 @@
                   <a name="selectMultipleContactsTest">
                   </a> <!-- selectMultipleContactsTest -->
                   <span class="method-name">selectMultipleContactsTest</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Test Run &apos;]//parent::td[@class=&apos;datalistrow&apos;]//preceding-sibling::td[@class=&apos;datalistrow&apos;]//input[@name=&apos;contact_id&apos;]&quot;}
-  (Session info: chrome=72.0.3626.109)
-  (Driver info: chromedriver=2.45.615355 (d5698f682d8b2742017df6c81e0bd8e6a3063189),platform=Mac OS X 10.14.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//a[text()=&apos;Test Run &apos;]//parent::td[@class=&apos;datalistrow&apos;]//preceding-sibling::td[@class=&apos;datalistrow&apos;]//input[@name=&apos;contact_id&apos;]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;Jewells-MBP.home&apos;, ip: &apos;fe80:0:0:0:148f:87e3:e9c5:9f12%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.3&apos;, java.version: &apos;1.8.0_201&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615355 (d5698f682d8b27..., userDataDir: /var/folders/69/wvcn82r17px...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58685}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.109, webStorageEnabled: true}
-Session ID: 88136aa9baf79808e272a29aaca5aac3
-*** Element info: {Using=xpath, value=//a[text()=&apos;Test Run &apos;]//parent::td[@class=&apos;datalistrow&apos;]//preceding-sibling::td[@class=&apos;datalistrow&apos;]//input[@name=&apos;contact_id&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
@@ -232,7 +214,7 @@ Session ID: 88136aa9baf79808e272a29aaca5aac3
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/69/wvcn82r17px0sk8npj02myr00000gn/T/testng-eclipse-1378626449/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/69/wvcn82r17px0sk8npj02myr00000gn/T/testng-eclipse--687184795/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -285,20 +267,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'selectMultipleContactsTest')
 data.setCell(0, 2, 'com.crmpro.qa.tests.ContactsPageTest')
-data.setCell(0, 3, 10105);
+data.setCell(0, 3, 2921);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'selectSingleContactsTest')
 data.setCell(1, 2, 'com.crmpro.qa.tests.ContactsPageTest')
-data.setCell(1, 3, 64);
+data.setCell(1, 3, 70);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyContactsPageLabe')
 data.setCell(2, 2, 'com.crmpro.qa.tests.ContactsPageTest')
-data.setCell(2, 3, 28);
+data.setCell(2, 3, 31);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -331,37 +313,37 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyContactsPageLabe</span>
-                <span class="method-start">4462 ms</span>
+                <span class="method-start">4990 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">4491 ms</span>
+                <span class="method-start">5023 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">4591 ms</span>
+                <span class="method-start">5126 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">selectSingleContactsTest</span>
-                <span class="method-start">8620 ms</span>
+                <span class="method-start">9417 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">8685 ms</span>
+                <span class="method-start">9488 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">8787 ms</span>
+                <span class="method-start">9591 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">selectMultipleContactsTest</span>
-                <span class="method-start">12757 ms</span>
+                <span class="method-start">13942 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">22864 ms</span>
+                <span class="method-start">16865 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -2,79 +2,55 @@
 <testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22973" started-at="2019-02-22T05:11:28Z" finished-at="2019-02-22T05:11:51Z">
+  <suite name="Default suite" duration-ms="16982" started-at="2019-02-22T19:17:23Z" finished-at="2019-02-22T19:17:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22973" started-at="2019-02-22T05:11:28Z" finished-at="2019-02-22T05:11:51Z">
+    <test name="Default test" duration-ms="16982" started-at="2019-02-22T19:17:23Z" finished-at="2019-02-22T19:17:40Z">
       <class name="com.crmpro.qa.tests.ContactsPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="setUp" is-config="true" duration-ms="4462" started-at="2019-02-22T05:11:28Z" finished-at="2019-02-22T05:11:33Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="setUp" is-config="true" duration-ms="4990" started-at="2019-02-22T19:17:23Z" finished-at="2019-02-22T19:17:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyContactsPageLabe()[pri:1, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="verifyContactsPageLabe" duration-ms="28" started-at="2019-02-22T05:11:33Z" finished-at="2019-02-22T05:11:33Z">
+        <test-method status="PASS" signature="verifyContactsPageLabe()[pri:1, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="verifyContactsPageLabe" duration-ms="31" started-at="2019-02-22T19:17:28Z" finished-at="2019-02-22T19:17:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyContactsPageLabe -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="tearDown" is-config="true" duration-ms="99" started-at="2019-02-22T05:11:33Z" finished-at="2019-02-22T05:11:33Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="tearDown" is-config="true" duration-ms="102" started-at="2019-02-22T19:17:28Z" finished-at="2019-02-22T19:17:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="setUp" is-config="true" duration-ms="4029" started-at="2019-02-22T05:11:33Z" finished-at="2019-02-22T05:11:37Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="setUp" is-config="true" duration-ms="4291" started-at="2019-02-22T19:17:28Z" finished-at="2019-02-22T19:17:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="selectSingleContactsTest()[pri:2, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="selectSingleContactsTest" duration-ms="64" started-at="2019-02-22T05:11:37Z" finished-at="2019-02-22T05:11:37Z">
+        <test-method status="PASS" signature="selectSingleContactsTest()[pri:2, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="selectSingleContactsTest" duration-ms="70" started-at="2019-02-22T19:17:33Z" finished-at="2019-02-22T19:17:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectSingleContactsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="tearDown" is-config="true" duration-ms="101" started-at="2019-02-22T05:11:37Z" finished-at="2019-02-22T05:11:37Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="tearDown" is-config="true" duration-ms="102" started-at="2019-02-22T19:17:33Z" finished-at="2019-02-22T19:17:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="setUp" is-config="true" duration-ms="3970" started-at="2019-02-22T05:11:37Z" finished-at="2019-02-22T05:11:41Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="setUp" is-config="true" duration-ms="4351" started-at="2019-02-22T19:17:33Z" finished-at="2019-02-22T19:17:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="selectMultipleContactsTest()[pri:3, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="selectMultipleContactsTest" duration-ms="10105" started-at="2019-02-22T05:11:41Z" finished-at="2019-02-22T05:11:51Z">
+        <test-method status="FAIL" signature="selectMultipleContactsTest()[pri:3, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="selectMultipleContactsTest" duration-ms="2921" started-at="2019-02-22T19:17:37Z" finished-at="2019-02-22T19:17:40Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Test Run ']//parent::td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']"}
-  (Session info: chrome=72.0.3626.109)
-  (Driver info: chromedriver=2.45.615355 (d5698f682d8b2742017df6c81e0bd8e6a3063189),platform=Mac OS X 10.14.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
+              <![CDATA[Cannot locate an element using xpath=//a[text()='Test Run ']//parent::td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'Jewells-MBP.home', ip: 'fe80:0:0:0:148f:87e3:e9c5:9f12%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.3', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615355 (d5698f682d8b27..., userDataDir: /var/folders/69/wvcn82r17px...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58685}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.109, webStorageEnabled: true}
-Session ID: 88136aa9baf79808e272a29aaca5aac3
-*** Element info: {Using=xpath, value=//a[text()='Test Run ']//parent::td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']}]]>
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Test Run ']//parent::td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']"}
-  (Session info: chrome=72.0.3626.109)
-  (Driver info: chromedriver=2.45.615355 (d5698f682d8b2742017df6c81e0bd8e6a3063189),platform=Mac OS X 10.14.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//a[text()='Test Run ']//parent::td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'Jewells-MBP.home', ip: 'fe80:0:0:0:148f:87e3:e9c5:9f12%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.3', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615355 (d5698f682d8b27..., userDataDir: /var/folders/69/wvcn82r17px...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58685}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.109, webStorageEnabled: true}
-Session ID: 88136aa9baf79808e272a29aaca5aac3
-*** Element info: {Using=xpath, value=//a[text()='Test Run ']//parent::td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
@@ -111,7 +87,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectMultipleContactsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="tearDown" is-config="true" duration-ms="93" started-at="2019-02-22T05:11:51Z" finished-at="2019-02-22T05:11:51Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.tests.ContactsPageTest@7cd62f43]" name="tearDown" is-config="true" duration-ms="101" started-at="2019-02-22T19:17:40Z" finished-at="2019-02-22T19:17:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

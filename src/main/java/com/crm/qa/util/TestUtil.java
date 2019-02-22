@@ -11,8 +11,5 @@ public class TestUtil extends TestBase{
 	public void swithToFrame() {
 		driver.switchTo().frame("mainpanel");
 	}
-	
-	
-	
 
 }

@@ -1,7 +1,7 @@
 package com.crm.qa.base;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.FileNotFoundException;     
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -14,8 +14,8 @@ import com.crm.qa.util.TestUtil;
 
 public class TestBase {  //Both reference variables defined right after class and inside constructor
 	
-	public static WebDriver driver; //Gets initialized once line 43 is written.. means inside child class I use it as well 
-	public static Properties prop; //Define this property 
+	public static WebDriver driver; ////Make it public so use in Child class as well    |   Gets initialized once line 43 is written.. means inside child class I use it as well 
+	public static Properties prop; //Porp is short for Properties which is getting Initialized below in Try Catch block 
 	
 	
 	public TestBase(){  //Gets called by all PageTest classes constructors with "super" keyword 
@@ -48,17 +48,18 @@ public class TestBase {  //Both reference variables defined right after class an
 		public static void initialization() throws InterruptedException{
 		String browserName = prop.getProperty("browser");
 		System.setProperty("webdriver.chrome.driver", "/Users/jewellmehedi/Downloads/chromedriver");
-		driver = new ChromeDriver();
+		driver = new ChromeDriver();  //This line initialize above driver variable line 17 gets initialized, now I use it inside child class
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		//driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
-		driver.get(prop.getProperty("url"));  //Advantage of prop, can use prop inside the initialization method  
-		//because we defined prop at the global level	
+		driver.get(prop.getProperty("url"));  //Advantage of prop, can use prop inside the initialization() method  
+		//because we defined prop at the global level
+		
 		
 	}
 	

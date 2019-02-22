@@ -16,21 +16,23 @@ public class LoginPage extends TestBase {                 //Created PAGE LIBRARY
 	WebElement password;
 	
 	@FindBy(xpath="//input[@type='submit']")
-	WebElement login;  
+	WebElement loginBtn;  
 	
 	
 	@FindBy (xpath = "//a[contains(text(), 'Sign Up')]")
-	WebElement Signup;
+	WebElement SignupBtn;
 	
-	@FindBy (xpath ="//img[contains (@class, 'img-responsive') ]")
-	WebElement crmLogo;                                      //5 page factory or page object repositories defined
+	@FindBy (xpath ="//img[contains (@class, 'img-responsive') ]")       //5 page factory or page object repositories defined
+	WebElement crmLogo;                                              
 	
 	
-	//Initializing all the Page Objects above
-	public LoginPage() {  //***IQ: How will you initialize your Page Factory? 
-		
-		PageFactory.initElements(driver, this); //Ans: We use a method called PageFactory dot init Element means (initialize elements) with driver and "this", which (means or point to current class "LoginPage" object's)
-	}                                          // all its variables will get initialized
+	//Now Initializing elements (Page Objects) W/ help of Page Factory 
+	public LoginPage() { 
+		PageFactory.initElements(driver, this); //this driver coming from TestBase class cuz it's public there @ the global level
+	}  
+		  //***IQ: How will you initialize your Page Factory? 
+		 //Ans: We use a method called PageFactory dot init Element means (initialize elements) with driver and "this", which (means or point to current class "LoginPage" object's)
+	    // all its variables will get initialized w/ this driver
 	
 	
 	//Actions (features):
@@ -45,9 +47,9 @@ public class LoginPage extends TestBase {                 //Created PAGE LIBRARY
 	public HomePage login(String un, String pwd) {
 		username.sendKeys(un);
 		password.sendKeys(pwd);	
-		login.submit();
+		loginBtn.submit();
 		
-		return new HomePage();
+		return new HomePage();  //Login page is the landing page of HomePage.. so it's returning HP
 		
 	}
 }

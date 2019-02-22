@@ -8,7 +8,7 @@ import com.crm.qa.base.TestBase;
 
 public class HomePage extends TestBase {
 	
-	@FindBy(xpath="//td[contains(texgt(), 'User: jmintegr1')]")   //Hard coded here but later  I can pass it from configuration file 
+	@FindBy(xpath="//td[contains(texgt(), 'User: jmintegr1')]") //input[@placeholder='Username']  //Hard coded here but later  I can pass it from configuration file 
 	WebElement userNameLabel; 
 	
 	@FindBy(xpath="//a[contains(text(),'Contacts')]")
@@ -25,7 +25,7 @@ public class HomePage extends TestBase {
 	public HomePage() {  //***IQ: How will you initialize your Page Factory? 
 		
 		PageFactory.initElements(driver, this);  //Ans: We create a constructor of HomePage here and use a method called PageFactory dot init Element means 
-		                                        //(initialize elements) with driver and "this" (means point to current class "LoginPage" object's) all its variables will get initialized
+		                                        //(initialize elements) with driver and "this" (means point to current class "LoginPage" object's) then all its variables will get initialized
 	}                                          
 	
 	public String verifyHomePageTitle() {
