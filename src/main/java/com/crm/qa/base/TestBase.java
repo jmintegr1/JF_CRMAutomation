@@ -3,21 +3,23 @@ package com.crm.qa.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;     
 import java.io.IOException;
+import java.util.EventListener;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.events.WebDriverEventListener;
 
 import com.crm.qa.util.TestUtil;
+import com.crm.qa.util.WebEventListener;
 
 public class TestBase {  //Both reference variables defined right after class and inside constructor
 	
 	public static WebDriver driver; ////Make it public so use in Child class as well    |   Gets initialized once line 43 is written.. means inside child class I use it as well 
 	public static Properties prop; //Porp is short for Properties which is getting Initialized below in Try Catch block 
-	
-	
 	public TestBase(){  //Gets called by all PageTest classes constructors with "super" keyword 
 		try {
 			prop = new Properties();   //This property above is getting initialized here
@@ -49,6 +51,12 @@ public class TestBase {  //Both reference variables defined right after class an
 		String browserName = prop.getProperty("browser");
 		System.setProperty("webdriver.chrome.driver", "/Users/jewellmehedi/Downloads/chromedriver");
 		driver = new ChromeDriver();  //This line initialize above driver variable line 17 gets initialized, now I use it inside child class
+		
+		//e_driver = new EventFiringWebDriver(driver);
+//		e_driver = new EventFiringWebDriver(driver);
+//		//Now create object of EvenListenerHandler to register it with EventFiringWebDriver 
+//		e_driver.register(eventListener);
+//		driver = e_driver;
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

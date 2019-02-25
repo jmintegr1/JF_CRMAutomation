@@ -5,6 +5,7 @@
     <classes>
       <class name="com.crmpro.qa.tests.ContactsPageTest">
         <methods>
+          <include name="validateCreateNewContact"/>
           <include name="selectMultipleContactsTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>

@@ -3,6 +3,7 @@ package com.crmpro.qa.tests;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.Assert;
 
 
@@ -19,6 +20,8 @@ public class ContactsPageTest extends TestBase {
 	HomePage homePage;
 	TestUtil testUtil;  
 	ContactsPage contactsPage; 
+	
+	String sheetName = "contacts";
 
 	
 	public ContactsPageTest() { //Need this constructor with super keyword so calls super class constructor (TestBase)
@@ -48,10 +51,23 @@ public class ContactsPageTest extends TestBase {
 	
 	@Test(priority=3)
 	public void selectMultipleContactsTest() { //By using having flexible method in ContactsPage we can check mark as many names here in ContactsPageTest
-
 		contactsPage.selectContactsByName("Nav Smith");
-		contactsPage.selectContactsByName("Test Run ");
-        
+		contactsPage.selectContactsByName("Test Run "); 
+	}
+	
+//	@DataProvider
+//	public Object[][] getCRMPROTestData() {
+//		Object data [][] = TestUtil.getTestData(sheetName); //If we have 100 rows of data in excel sheet, it will be stored in data[][]
+//		return data;
+//	}
+	
+	@Test(priority=4, dataProvider="getCRMPROTestData")
+	public void validateCreateNewContact(String title, String firstName, String lastName, String company) {
+		homePage.clickOnNewContactLink();
+		//Once @DataProvider from above is set and we brought it to this TC via getCRMPROTestData then we don't need hard coded one below
+		//contactsPage.createNewContact("Mr.", "VeryWeaktoStrong", "Goggins", "Seal");  //Problem is this is hard coded, so if we have to create 100 contacts tomorrow 
+	        //with different sort of data or different negative testing.. values so we'll use: Data Driven Approach 
+		contactsPage.createNewContact(title, firstName, lastName, company);
 	}
 	
 	@AfterMethod

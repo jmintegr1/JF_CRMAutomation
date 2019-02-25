@@ -14,7 +14,7 @@ import com.crm.qa.util.TestUtil;
 public class HomePageTest extends TestBase {
 	LoginPage loginPage;
 	HomePage homePage;
-	TestUtil testUtil;  //Create TestUtil Object then import it from com.crm.qa.util
+	TestUtil testUtil;          //Create TestUtil Object then import it from com.crm.qa.util
 	ContactsPage contactsPage; //Create contactsPage reference and initialize @ line 29
 
 	
@@ -40,13 +40,13 @@ public class HomePageTest extends TestBase {
 	
 	@Test(priority=2)  //Jewell Mehedi element is available on particular frame, so right click to page source then you'll see frame name is on "mainpanel" so we 
 	public void verifyUserNameTest() {   //have to switch to that frame.
-		testUtil.swithToFrame(); //Will call method from TestUtil class and switch to the frame then verifying verifyCorrectUserName method from HomePage  
+		testUtil.swithToFrame(); //Will call method from TestUtil class and switch to the main panel then verifying verifyCorrectUserName() method from HomePage  
 		Assert.assertTrue(homePage.verifyCorrectUserName());
 	}
 	
 	@Test(priority=3)
 	public void verifyContactsLinkTest() {
-		testUtil.swithToFrame(); //This element is also on different frame so use swithToFrame from TestUtil class as well 
+		testUtil.swithToFrame(); //This element also on different frame so use swithToFrame from TestUtil class as well 
 		contactsPage = homePage.clickOnContactsLink(); //Since this is returning ContactsPage object I will store it inside it
 	}
 	

@@ -53,3 +53,5 @@ import com.crm.qa.pages.LoginPage;
 	}
 
 }
+	
+	//TEST RUNNER CLASS, where we run all the TC at once from src/main/resources > group the TC in Test Runner Class 
