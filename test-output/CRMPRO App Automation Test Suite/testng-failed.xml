@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [CRMPRO App Automation Test Suite]">
-  <test thread-count="5" name="CRMPRO App Test Cases(failed)">
+  <test thread-count="5" name="CRM App Test Cases(failed)">
     <classes>
-      <class name="com.crmpro.qa.tests.ContactsPageTest">
-        <methods>
-          <include name="validateCreateNewContact"/>
-          <include name="selectMultipleContactsTest"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.crmpro.qa.tests.ContactsPageTest -->
       <class name="com.crmpro.qa.tests.LoginPageTest">
         <methods>
+          <include name="crmLogoImageTest"/>
           <include name="setUp"/>
+          <include name="loginTest"/>
           <include name="tearDown"/>
           <include name="loginPageTitleTest"/>
         </methods>
       </class> <!-- com.crmpro.qa.tests.LoginPageTest -->
     </classes>
-  </test> <!-- CRMPRO App Test Cases(failed) -->
+  </test> <!-- CRM App Test Cases(failed) -->
 </suite> <!-- Failed suite [CRMPRO App Automation Test Suite] -->

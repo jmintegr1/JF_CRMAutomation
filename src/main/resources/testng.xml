@@ -2,10 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="CRMPRO App Automation Test Suite">       
   
-<!--   	<listeners>
-		<listener class-name="com.qa.ExtentReportListener.ExtentReporterNG" />
-	</listeners>
- -->  
+	   	<listeners>
+		<listener 
+		    class-name="com.qa.ExtentReportListener.ExtentReportNG" />   <!-- It will listen to all the classes below for html report, name as given in extent report line 31 -->
+		</listeners>
+   
   
      <test name="CRMPRO App Test Cases">
     

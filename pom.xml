@@ -1,6 +1,7 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>FreeCRMTestAutomation</groupId>
 	<artifactId>FreeCRMTest</artifactId>
@@ -12,30 +13,30 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		 <maven.compiler.source>1.8</maven.compiler.source>
-         <maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
-     	<dependency>
-        	<groupId>org.seleniumhq.selenium</groupId>
-        	<artifactId>selenium-java</artifactId>
-        	<version>3.141.59</version>
-    	</dependency>  
-    
-    	<dependency>
-    		<groupId>org.testng</groupId>
-    		<artifactId>testng</artifactId>
-    		<version>6.14.3</version>
-     		<scope>compile</scope>
-	 	</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+			<scope>compile</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>3.16-beta2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
@@ -46,13 +47,13 @@
 			<artifactId>poi-ooxml-schemas</artifactId>
 			<version>3.9</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-scratchpad</artifactId>
 			<version>3.9</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>ooxml-schemas</artifactId>
@@ -66,10 +67,11 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+
 		<dependency>
-   			 <groupId>com.aventstack</groupId>
-    		 <artifactId>extentreports</artifactId>
-    		 <version>4.0.9</version>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
@@ -78,26 +80,28 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.6</version>
 		</dependency>
-    
-  	</dependencies>
-		<build>
-			<plugins>
-				<plugin>
-				
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.0.0-M2</version>
-    <configuration>
-    <suiteXmlFiles>
-    	<suiteXmlFile>
-    src/main/resources/TestNG_Smoke.xml
-    	</suiteXmlFile>
-    	<suiteXmlFile>
-    src/main/resources/testng.xml
-   	 	</suiteXmlFile>
-    </suiteXmlFiles>
-    </configuration>
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M2</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>
+							src/main/resources/TestNG_Smoke.xml
+						</suiteXmlFile>
+						<suiteXmlFile>
+							src/main/resources/testng.xml
+						</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
 </project>

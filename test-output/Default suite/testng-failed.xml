@@ -9,6 +9,8 @@
           <include name="selectMultipleContactsTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="selectSingleContactsTest"/>
+          <include name="verifyContactsPageLabe"/>
         </methods>
       </class> <!-- com.crmpro.qa.tests.ContactsPageTest -->
     </classes>

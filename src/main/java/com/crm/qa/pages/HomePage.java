@@ -1,7 +1,5 @@
 package com.crm.qa.pages;
 
-import javax.annotation.WillClose;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
@@ -18,9 +16,9 @@ public class HomePage extends TestBase {
 	//***How will you improve your script performance?
 	//CacheLookup - Is a Selenium annotation that will store a particular user label name or element in a Cache, in a dedicated memory. So whenever we are interacting with this element, instead of the 
 	//page, it will get that particular element from the Cache. So it speeds up framework as well as the performance of the script. It speeds up because the elements does not have 
-	//to be retrieved from HTMLDom, it can just pull it from Cache.
+	//to be retrieved from HTML Dom, it can just pull it from Cache.
 	 
-	//When there is refresh and things changes or elements changes and we depend on Cache Memory (CM) then we'll get = StaleElemntException. That's why we use CacheLookup when we are sure that particular 
+	//When there is refresh and things changes or elements changes and we depend on Cache Memory (CM) then we'll get = StaleElemntException. That's why we use Cache Lookup when we are sure that particular 
 	//element will NOT change. 
 	
 	WebElement userNameLabel; 
@@ -40,10 +38,10 @@ public class HomePage extends TestBase {
 	WebElement tasksLink;
 	
 	//Initializing all the Page Objects above
-	public HomePage() {  //***IQ: How will you initialize your Page Factory? 
+	public HomePage() {                            //***IQ: How will you initialize your Page Factory? 
 		
-		PageFactory.initElements(driver, this);  //Ans: We create a constructor of HomePage here and use a method called PageFactory dot init Element, which means 
-		                                        //(initialize elements) with driver and "this" (means point to current class "LoginPage" object's) then all its variables will get initialized
+		PageFactory.initElements(driver, this);  //Ans: We create a constructor of the page we want to initialize (here HomePage) and use a class called PageFactory.initElements() method which means 
+		                                        //(initialize elements) with driver, and "this" (means point to current class "HomePage" object's) then all its variables will get initialized
 	}                                          
 	
 	public String verifyHomePageTitle() {
@@ -64,10 +62,10 @@ public class HomePage extends TestBase {
 		return new DealsPage();	
 	}
 	
-	public TasksPage clickTaskLink() {
-		tasksLink.click();
-		return new TasksPage();
-	}
+//	public TasksPage clickTaskLink() {  //Ibrahim's example for..
+//		tasksLink.click();
+//		return new TasksPage();
+//	}
 	
 	public void clickOnNewContactLink() {
 		Actions action = new Actions(driver);

@@ -13,6 +13,7 @@ package com.crmpro.qa.tests;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.crm.qa.base.TestBase;
@@ -32,7 +33,7 @@ public class ContactsPageTest extends TestBase {
 	String sheetName = "contacts";
 
 	
-	public ContactsPageTest() { //Need this constructor with super keyword so calls super class constructor (TestBase)
+	public ContactsPageTest() { //Need this constructor with super keyword so it calls super class constructor from (TestBase)
 		super();  
 	}
 	
@@ -63,24 +64,24 @@ public class ContactsPageTest extends TestBase {
 		contactsPage.selectContactsByName("Test Run "); 
 	}
 	
-//	@DataProvider
-//	public Object[][] getCRMPROTestData() {
-//		Object data [][] = TestUtil.getTestData(sheetName); //If we have 100 rows of data in excel sheet, it will be stored in data[][]
-//		return data;
-//	}
+	@DataProvider
+	public Object[][] getCRMPROTestData() {
+		Object data [][] = TestUtil.getTestData(sheetName); //If we have 100 rows of data in excel sheet, it will be stored in data[][]
+		return data;
+	}
 	
 	@Test(priority=4, dataProvider="getCRMPROTestData")
 	public void validateCreateNewContact(String title, String firstName, String lastName, String company) {
 		homePage.clickOnNewContactLink();
-		//Once @DataProvider from above is set and we brought it to this TC via getCRMPROTestData then we don't need hard coded one below
+		 //Once @DataProvider from above is set and we brought it to this TC via getCRMPROTestData then we don't need hard to code as shown below
 		//contactsPage.createNewContact("Mr.", "VeryWeaktoStrong", "Goggins", "Seal");  //Problem is this is hard coded, so if we have to create 100 contacts tomorrow 
-	        //with different sort of data or different negative testing.. values so we'll use: Data Driven Approach 
+	   //with different sort of data or different negative testing.. values so we'll use: Data Driven Approach 
 		contactsPage.createNewContact(title, firstName, lastName, company);
 	}
 	
 	@AfterMethod
-	public void tearDown() {   //***TC should be separated & independent of each other. Because if don't fully shut down a browser after executing it 
-		driver.quit();        //and continue to run subsequent TCs continuously and not delete cookies or caches then it has determinately affect on the browser
+	public void tearDown() {   //***TC should be separated & independent of each other. Because if it didn't fully shut down a browser after executing it 
+		driver.quit();        //and continue to run subsequent TCs therefore did not delete cookies or caches then it can determinately affect on the browser
+		
 	}                        
-	
 }

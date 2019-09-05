@@ -27,11 +27,11 @@ public class ContactsPage extends TestBase {
 	WebElement saveBtn;
 	
 	
-	//So let's say now we want to click on check box for Nav Smith	
+	 //So let's say now we want to click on check box for Nav Smith	
 	
 	//driver.findElement(By.xpath("//a[text()='Nav Smith']//parent::td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']")).click();
 	//This find by parent sibling and child approach is not optimal since it is ONLY specific for "Nav Smith". Let's say tomorrow I have to select on "Test Run" or many others then I have 
-	//to create anyother @ (at the rate) find by so if I have to select 100 contacts then I have to write 100x @ so in this case we want to use PAGE FACTORY. So we'll write our code
+	//to create another @ (at the rate) find by so if I have to select 100 contacts then I have to write 100x @ so in this case we want to use PAGE FACTORY. So we'll write our code
 	//directly here line 
 
 	
@@ -39,8 +39,8 @@ public class ContactsPage extends TestBase {
 	
 	public ContactsPage() {  //***IQ: How will you initialize your Page Factory? 
 	PageFactory.initElements(driver, this);   //Using the above class name ContactsPage and method below.. 
-	}	                     //Ans: We use a method called PageFactory dot init Element means, (initialize elements) with driver and "this" means (point to current class "ContactsPage" object's)
-	                                          // all its variables will get initialized
+	}	                     //Ans: We create a constructor & with PageFactory.initElements(), & parameterize it with (Driver, this) means "this"  the keyword points to current class ("ContactsPage") object
+	                        // then all its variables will get initialized
 		
 	public boolean verfifyContactsLabel() {
 		return contactsLabel.isDisplayed();

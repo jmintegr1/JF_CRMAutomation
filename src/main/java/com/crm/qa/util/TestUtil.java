@@ -1,34 +1,28 @@
 package com.crm.qa.util;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
-import org.apache.commons.io.FileUtils;
 import org.apache.poi.hslf.model.Sheet;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.openqa.selenium.TakesScreenshot;
 
 import com.crm.qa.base.TestBase;
-import com.google.common.base.MoreObjects.ToStringHelper;
-import com.mongodb.MapReduceCommand.OutputType;
 
-public class TestUtil extends TestBase{
+public class TestUtil extends TestBase{    //This class makes is Data Driven!
 	
-	public static long PAGE_LOAD_TIMEOUT = 20; //Since  pageLoadTimeout & implicitlyWait is long in Base class, it is long here well 
+	public static long PAGE_LOAD_TIMEOUT = 20; //Since  pageLoadTimeout & implicitlyWait is long in Base class, it is long here as well 
 	public static long IMPLICIT_WAIT = 10;
 	
-	public static String TESTDATA_SHEET_PATH = "/Users/jewellmehedi/eclipse-workspace/JFreeCRM_POM/src/main/java/com/crm/qa/testdatasheet/FreeCRMPROTestData.xlsx";
+	public static String TESTDATA_SHEET_PATH = "Users/jewellmehedi/Documents/eclipse-workspace/FreeCRMPRO_Automation/JF_CRMAutomation/src/main/java/com/crm/qa/testdatasheet/FreeCRMPROTestData.xlsx";
 	                                                         //Path from X-cel Sheet, right click properties..                  
 	static Workbook book;
-	static Sheet sheet;
+	static Sheet sheet;///Users/jewellmehedi/Documents/eclipse-workspace/FreeCRMPRO_Automation/JF_CRMAutomation/src/main/java/com/crm/qa/config/config.properties   
 	
 	
-	public void swithToFrame() {//SwithToFrame method used for VerfifyHomePageTitleTest() & verifyContactsLinkTest() method in HomePageTest cuz it is in different panel
+	public void swithToFrame() {//SwithToFrame method used to VerfifyHomePageTitleTest() & verifyContactsLinkTest() method in HomePageTest cuz it is in different panel
 		driver.switchTo().frame("mainpanel");   
+	}
+
+
+	public static Object[][] getTestData(String sheetName) {
+		return null;
 	}
 	
 	

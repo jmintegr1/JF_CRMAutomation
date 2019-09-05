@@ -28,10 +28,10 @@ public class LoginPage extends TestBase {                 //Created PAGE LIBRARY
 	
 	//Now Initializing elements (Page Objects) W/ help of Page Factory 
 	public LoginPage() { 
-		PageFactory.initElements(driver, this); //this driver coming from TestBase class cuz it's public there @ the global level
+		PageFactory.initElements(driver, this); //This driver coming from TestBase class cuz it's public there @ the global level
 	}  
 		  //***IQ: How will you initialize your Page Factory? 
-		 //Ans: We use a method called PageFactory dot init Element means (initialize elements) with driver and "this", which (means or point to current class "LoginPage" object's)
+		 //Ans: We use a method called PageFactory initElements() It means (initialize elements) with driver and "this", which (means point to current class "LoginPage" object's)
 	    // all its variables will get initialized w/ this driver
 	
 	

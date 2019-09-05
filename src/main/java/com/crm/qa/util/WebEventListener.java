@@ -7,20 +7,17 @@ package com.crm.qa.util;
  as an when the action done (click, findBy etc). 
  */
 
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener; //Get proper action, error, or console logs. 
 
 import com.crm.qa.base.TestBase;
 
-public class WebEventListener extends TestBase implements WebDriverEventListener {
+public class WebEventListener extends TestBase implements WebDriverEventListener {    
 
-	public void beforeNavigateTo(String url, WebDriver driver) {
+	public void beforeNavigateTo(String url, WebDriver driver) {   //These are the listeners
 		System.out.println("Before navigating to: '" + url + "'");
 	}
 
@@ -156,7 +153,7 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 //	@Override
 //	public void onException(Throwable error, WebDriver driver) {
 //		public void onException(Throwable error, WebDriver driver) { //I want this method to fire only when any exception as well as error coming
-//		System.out.println("Exception occured: " + error);
+//		System.out.println("Exception occurred: " + error);
 //		try	}
 //			takeScreenshotAtEndOfTest();
 //		} catch (IOException e) {
