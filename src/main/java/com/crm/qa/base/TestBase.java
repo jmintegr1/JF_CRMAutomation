@@ -36,9 +36,9 @@ public class TestBase {  //Both reference variables defined right after class an
 			
 			String browserName = prop.getProperty("browser");   //Prop assist in reading properties
 			if (browserName.contains("chrome")) { // If using equals, you have to ensure that the String is matching exactly, even a space before the text "chrome" will be counted as a character
-				//System.setProperty("webdriver.chrome.driver", "/Users/jewellmehedi/Downloads/chromedriver");
-			     //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver"); // System.getPropert("user.dir") you will need to get you the current space you are in, eg. the Project level.
-				// This way you are ensuring if anyone wants to run this test on their environment, they don't have to have the ChromeDriver in their local environment, as long there is FF driver then they can run it.
+				System.setProperty("webdriver.chrome.driver", "/Users/jewellmehedi/Downloads/chromedriver");
+			    //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver"); // System.getPropert("user.dir") you will need to get you the current space you are in, eg. the Project level.
+				//This way you are ensuring if anyone wants to run this test on their environment, they don't have to have the ChromeDriver in their local environment, as long there is FF driver then they can run it.
 				driver = new ChromeDriver(); //Refer to WebDriver as driver; variable above.. line 18
 			}
 		
@@ -57,12 +57,18 @@ public class TestBase {  //Both reference variables defined right after class an
 			driver.get(prop.getProperty("url"));  //Advantage of prop is we can use prop inside the initialization() method  
 			//because we defined prop at the global level
 			
-		}
+			}
 		
-		public static void initializationXX() throws InterruptedException{  
-			String browserName = prop.getProperty("browser");
-			System.setProperty("webdriver.chrome.driver", "/Users/jewellmehedi/Downloads/chromedriver");   
-			driver = new ChromeDriver();  //This line initialize above driver variable line 19 gets initialized, now I can use it inside child class
+//			public static void initializationXX() throws InterruptedException{  
+//			String browserName = prop.getProperty("browser");
+//			
+//			System.setProperty("webdriver.chrome.driver", "/Users/jewellmehedi/Downloads/chromedriver");   
+//			driver = new ChromeDriver();  //This line initialize above driver variable line 19 gets initialized, now I can use it inside child class
+//			
+//			System.setProperty("webdriver.gecko.driver", "/Users/jewellmehedi/Downloads/geckodriver");
+//			driver = new FirefoxDriver(); 	
+
+
 		
 //		e_driver = new EventFiringWebDriver(driver);
 //		//Now create object of EvenListenerHandler to register it with EventFiringWebDriver  
@@ -74,11 +80,10 @@ public class TestBase {  //Both reference variables defined right after class an
 //		driver.manage().deleteAllCookies();
 //		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 //		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-//		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-//		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+
 		
-		driver.get(prop.getProperty("url"));  //Advantage of prop is we can use prop inside the initialization() method  
+		//driver.get(prop.getProperty("url"));  //Advantage of prop is we can use prop inside the initialization() method  
 		//because we defined prop at the global level
 
-		}	
+		//}	
 }

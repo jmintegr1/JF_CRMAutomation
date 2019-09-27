@@ -23,7 +23,7 @@ public class TasksPage extends PageObjectBase {  //Ibrahim's example of how real
 	WebElement d;
 	
 	public void sendsomething() {
-		a.sendKeys("Send SOmething");
+		a.sendKeys("Send Something");
 	}
 	
 	public void dosomething() {

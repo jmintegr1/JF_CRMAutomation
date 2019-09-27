@@ -36,10 +36,9 @@ import com.crm.qa.pages.LoginPage;
 	@Test(priority = 1)
 	public void loginPageTitleTest(){
 		String title = loginPage.validateLoginPageTitle();
-		Assert.assertEquals(title, "CRMPRO  - CRM software for customer relationship management, sales, and support"); //Assert helps to validate what is the actual page title 
-	}                               //We got title by being logged out, page source 
-	
-		
+		Assert.assertEquals(title, "CRMPRO - CRM software for customer relationship management, sales, and support."); //Assert helps to validate what is the actual page title 
+	}                              //We got title by being logged out, page source 
+	                                
 	@Test(priority = 2)
 	public void crmLogoImageTest(){
 		boolean flag = loginPage.validateCRMImage();
